@@ -1,0 +1,55 @@
+header {
+    position: fixed;
+    z-index: 99;
+    
+    height: auto;
+    width: 100%;
+    padding: 15px 50px;
+}
+
+.nav{
+    padding: 15px 30px;
+    height: 80px;
+    width: 100%;
+    background-color: #F5F8F9;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.nav>.img_con{
+    width: 20%;
+}
+.nav>.img_con img{
+    height: 100%;
+}
+
+.nav nav{
+    height: 100%;
+    width: 60%;
+}
+
+.nav nav ul{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+
+    list-style: none;
+
+}
+
+.nav .contact{
+    width: 20%;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+
+    background-color: black;
+}
