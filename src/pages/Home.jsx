@@ -1,8 +1,9 @@
 import React from 'react'
 import ImageSlider from '../components/ImageSlider';
-import { checkus_agoda, checkus_airbnb, checkus_bookingcom, gallery_img1, gallery_img10, gallery_img11, gallery_img12, gallery_img13, gallery_img2, gallery_img3, gallery_img4, gallery_img5, gallery_img6, gallery_img7, gallery_img8, gallery_img9, LogoIconMain } from '../assets/img';
+import { checkus_agoda, checkus_airbnb, checkus_bookingcom } from '../assets/img';
 import Booking from '../components/Booking';
 import Rating from '../components/Rating';
+import { img1, img2, img3 } from '../constants';
 
 const Home = () => {
   return (
@@ -13,26 +14,6 @@ const Home = () => {
     </div>
   )
 }
-
-const img1 = [
-  gallery_img1,
-  gallery_img2,
-  gallery_img3,
-  gallery_img4,
-];
-const img2 = [
-  gallery_img5,
-  gallery_img6,
-  gallery_img7,
-  gallery_img8,
-];
-const img3 = [
-  gallery_img9,
-  gallery_img10,
-  gallery_img11,
-  gallery_img12,
-];
-
 
 const Hero_Section = () => {
   return (
