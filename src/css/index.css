@@ -5,12 +5,13 @@ body,
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F5F8F9;
+    font-family: "Nata Sans", sans-serif;
 }
 
 body {
     width: 100vw;
     overflow-x: hidden;
+    background-color: #F5F8F9;
 }
 
 #root {
@@ -28,21 +29,149 @@ section {
     background-color: #F5F8F9;
 }
 
+.gradient-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(270deg, #E1AA36, #239BA7, #E1AA36);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.review_stats{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border-radius: 0px;
+    transition: all 1s ease;
+}
+
+.review_stats:hover{
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #E1AA36;
+}
+
+.review_stats img{
+    height: 20px;
+}
+
+
+
+
+.booking {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-group input {
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #239BA7;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+}
+
+.book-button {
+    flex: 1 1 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #239BA7;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.book-button:hover {
+    background: #E1AA36;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-group {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+
 .hero {
     height: 100vh;
     padding: 110px 115px 0 100px;
 
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
 }
 
-.hero .hero_info{
+.hero .hero_info {
     width: 50%;
     height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.hero .img_section{
+.hero .hero_info .info h1 {
+    font-size: 70px;
+    line-height: 100%;
+    padding-bottom: 20px;
+    color: #239BA7;
+}
+
+.hero .img_section {
     width: 50%;
     height: 100%;
     display: flex;
@@ -52,7 +181,7 @@ section {
 }
 
 .hero .img_section>.left,
-.hero .img_section>.right{
+.hero .img_section>.right {
     width: 50%;
     height: 100%;
     display: flex;
@@ -61,18 +190,27 @@ section {
     gap: 10px;
 }
 
-.hero .img_section>.right{
+.hero .img_section>.right {
     justify-content: center;
 }
 
-.hero .slider_img{
+.hero .img_section>.right .cto{
+    height: 25%;
+}
+
+.hero .img_section>.right .rating{
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hero .slider_img {
     width: 100%;
     height: 50%;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
-
-
-
-
-
