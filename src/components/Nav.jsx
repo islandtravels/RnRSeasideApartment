@@ -16,7 +16,7 @@ const Nav = () => {
                 <li>Find Us</li>
                 <li>FAQ</li>
                 <li>Book</li>
-                
+
             </ul>
         </nav>
         <div className="contact">
@@ -25,6 +25,7 @@ const Nav = () => {
         </div>
       </div>
     </header>
+    <div className="new"></div>
   )
 }
 
