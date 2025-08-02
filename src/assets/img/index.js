@@ -37,6 +37,15 @@ export { default as gallery_img10 } from './gallery/img10.jpg';
 export { default as gallery_img11 } from './gallery/img11.jpg';
 export { default as gallery_img12 } from './gallery/img12.jpg';
 export { default as gallery_img13 } from './gallery/img13.jpg';
+export { default as gallery_img14 } from './gallery/img14.jpg';
+export { default as gallery_img15 } from './gallery/img15.jpg';
+export { default as gallery_img16 } from './gallery/img16.jpg';
+export { default as gallery_img17 } from './gallery/img17.jpg';
+export { default as gallery_img18 } from './gallery/img18.jpg';
+export { default as gallery_img19 } from './gallery/img19.jpg';
+export { default as gallery_img20 } from './gallery/img10.jpg';
+export { default as gallery_img21 } from './gallery/img21.jpg';
+export { default as gallery_img22 } from './gallery/img22.jpeg';
 
 // Hero images
 export { default as hero_bg1 } from './hero/bg-1.png';

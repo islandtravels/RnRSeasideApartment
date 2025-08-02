@@ -1,7 +1,7 @@
 header {
     position: fixed;
-    z-index: 99;
-    
+    z-index: 99999;
+
     height: auto;
     width: 100%;
     padding: 15px 100px;
@@ -9,28 +9,40 @@ header {
 
 }
 
-.nav{
-    padding: 15px 30px;
+.nav {
     height: 80px;
     width: 100%;
+    padding: 15px 30px;
+    border-radius: 0px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid grey;
+    backdrop-filter: blur(0px);
+    transition: all 0.3s ease;
 }
 
-.nav>.img_con{
+.nav.nav-scrolled {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px 25px;
+}
+
+.nav>.img_con {
     width: 20%;
 }
-.nav>.img_con img{
+
+.nav>.img_con img {
     height: 100%;
 }
 
-.nav nav{
+.nav nav {
     height: 100%;
     width: 60%;
 }
 
-.nav nav ul{
+.nav nav ul {
     height: 100%;
     width: 100%;
 
@@ -44,9 +56,9 @@ header {
 
 }
 
-.nav .contact{
+.nav .contact {
     width: 20%;
-    
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
