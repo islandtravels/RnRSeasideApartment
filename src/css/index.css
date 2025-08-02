@@ -1,4 +1,12 @@
-:root {}
+:root {
+    --color-secondary: #7ADAA5;
+    --color-primary: #239BA7;
+    --color-contrast: #ECECBB;
+    --color-highlight: #E1AA36;
+    --color-background: #F5F8F9;
+    --color-black: #01091f;
+}
+
 
 body,
 * {
@@ -11,7 +19,7 @@ body,
 body {
     width: 100vw;
     overflow-x: hidden;
-    background-color: #F5F8F9;
+    background-color: var(--color-background);
 }
 
 #root {
@@ -26,13 +34,12 @@ body {
 section {
     position: relative;
     width: 100%;
-    background-color: #F5F8F9;
 }
 
 .gradient-heading {
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(270deg, #E1AA36, #239BA7, #E1AA36);
+    background: linear-gradient(270deg, var(--color-highlight), var(--color-secondary), var(--color-highlight));
     background-size: 600% 600%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -58,19 +65,34 @@ section {
 .review_stats{
     text-decoration: none;
     text-align: center;
-    color: black;
-    border-radius: 0px;
+    color: var(--color-black);
+    background-color: var(--color-contrast);
+    padding: 15px;
+    border-radius: 5px;
     transition: all 1s ease;
 }
 
 .review_stats:hover{
     padding: 25px;
-    border-radius: 5px;
-    background-color: #E1AA36;
+    background-color: var(--color-highlight);
 }
 
 .review_stats img{
     height: 20px;
+}
+
+
+
+.Page_Label{
+    border-radius: 50px;
+    width: 150px;
+}
+
+.Page_Label p{
+    padding: 10px 15px;
+    background-color: var(--color-background);
+    text-align: center;
+
 }
 
 
@@ -99,7 +121,7 @@ section {
 
 .form-group label {
     font-size: 14px;
-    color: #333;
+    color: var(--color-black);
     margin-bottom: 6px;
     font-weight: 600;
 }
@@ -113,7 +135,7 @@ section {
 }
 
 .form-group input:focus {
-    border-color: #239BA7;
+    border-color: var(--color-primary);
     outline: none;
     box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
 }
@@ -123,7 +145,7 @@ section {
     padding: 14px;
     font-size: 16px;
     font-weight: 600;
-    background: #239BA7;
+    background: var(--color-primary);
     color: #fff;
     border: none;
     border-radius: 12px;
@@ -132,10 +154,9 @@ section {
 }
 
 .book-button:hover {
-    background: #E1AA36;
+    background: var(--color-highlight);
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
     .form-group {
         flex: 1 1 100%;
@@ -168,7 +189,7 @@ section {
     font-size: 70px;
     line-height: 100%;
     padding-bottom: 20px;
-    color: #239BA7;
+    color: var(--color-primary);
 }
 
 .hero .img_section {
@@ -213,4 +234,13 @@ section {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+.about{
+    margin-top: 20px;
+    padding: 110px 115px 110px 100px;
+    background-color: #239BA7;
 }

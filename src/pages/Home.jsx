@@ -3,13 +3,14 @@ import ImageSlider from '../components/ImageSlider';
 import { checkus_agoda, checkus_airbnb, checkus_bookingcom } from '../assets/img';
 import Booking from '../components/Booking';
 import Rating from '../components/Rating';
-import { img1, img2, img3 } from '../constants';
+import { img1, img2, img3, rating_info } from '../constants';
+import Page_Label from '../components/Page_Label';
 
 const Home = () => {
   return (
     <div className='page home'>
       <Hero_Section />
-      <section></section>
+      <About_Section />
       <section></section>
     </div>
   )
@@ -47,11 +48,10 @@ const Hero_Section = () => {
               <ImageSlider images={img3} interval={4000} classId={""} />
             </div>
             <div className='rating'>
-              <Rating logoImg={ checkus_airbnb } rating={"4.8 / 5"} reviews={"28"} link={"https://www.airbnb.com/rooms/823379786177377624?"}/>
-              <Rating logoImg={ checkus_agoda } rating={"9.7 / 10"} reviews={"31"} link={"https://www.agoda.com/r-r-s-rest-and-recreation-at-marina-spatial/hotel/dumaguete-ph.html"} />
-              <Rating logoImg={ checkus_bookingcom } rating={"8.4 / 10"} reviews={"15"} link={"https://www.booking.com/hotel/ph/2br-cozy-seaside-condo-in-dumaguete.html?"} />
+              {rating_info.map( (info, i) => 
+                <Rating logoImg={ info.img } rating={ info.rating } reviews={ info.reviews } link={ info.link }/>
+              )}
             </div>
-
           </div>
         </div>
 
@@ -59,5 +59,21 @@ const Hero_Section = () => {
     </>
   );
 }
+
+const About_Section = () => {
+  return(
+    <section className='about'>
+      <Page_Label pageLabel={"about"} />
+      <br />
+      <p>
+        Tired of cramped hotel rooms when traveling with family or friends?</p>
+      <br />
+      <p>
+        Our fully furnished 2-bedroom apartment offers the perfect alternative—a spacious and relaxing home away from home. With a well-equipped kitchen, cozy living area, and comfortable bedrooms, you’ll have all the space and convenience you need to truly unwind. Ideal for short-term stays, our apartment combines comfort, privacy, and affordability, so you can enjoy your trip without compromise
+      </p>
+    </section>
+  );
+}
+
 
 export default Home
