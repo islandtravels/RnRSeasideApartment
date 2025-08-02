@@ -186,15 +186,33 @@ const Testimonial_Section = () => {
     arrows: false,
     infinite: true,
     autoplay: true,
+    centerMode: true,
     autoplaySpeed: 5000,
     speed: 800,
     slidesToShow: 3,
     slidesToScroll: 1,
   };
 
+  const getRatingClass = (platform, rating) => {
+    if (platform === "Agoda" || platform === "Booking.com") {
+      if (rating >= 9) return "rating-green";
+      if (rating >= 8) return "rating-yellow";
+      if (rating >= 7) return "rating-orange";
+      return "rating-red";
+    }
+    return "rating-star";
+  };
+
+  const isNumericRating = (platform) =>
+    platform === "Agoda" || platform === "Booking.com";
+
+
   return (
     <section className="testimonial_section">
-      <h2>What Our Guests Say</h2>
+      <div className="title">
+        <Page_Label pageLabel={"Testimonials"} blue />
+        <h2>What Our Guests Say</h2>
+      </div>
       <Slider {...settings}>
         {testimonials.map((t, index) => (
           <div key={index} className="testimonial_card">
@@ -203,11 +221,15 @@ const Testimonial_Section = () => {
             </div>
             <p className="testimonial_review">"{t.review}"</p>
             <div className="testimonial_footer">
-              <span className="testimonial_name">– {t.name}</span>
-              <div className="testimonial_rating">
-                {[...Array(t.rating)].map((_, i) => (
-                  <FaStar key={i} className="star" />
-                ))}
+              <span className="testimonial_name">– {t.name}, {t.date}</span>
+              <div className={`rating-badge ${getRatingClass(t.platform, t.rating)}`}>
+                {
+                  isNumericRating(t.platform) ? (
+                    `${t.rating}/10`
+                  ) : (
+                    [...Array(t.rating)].map((_, i) => <span key={i}>⭐</span>)
+                  )
+                }
               </div>
             </div>
           </div>

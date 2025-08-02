@@ -108,25 +108,107 @@ export const houseRulesList = [
 
 export const testimonials = [
   {
-    name: "John Doe",
+    name: "Johnny",
+    date: "May 2025",
     platform: "Airbnb",
     logo: checkus_airbnb,
     rating: 5,
-    review: "Wonderful stay! The place was spotless and very cozy. Would book again in a heartbeat."
+    review: "I had an absolutely wonderful stay at Rommel’s place! From the moment I arrived, I felt right at home. The place was exceptionally clean and comfortable, with a level of cleanliness that truly sets it apart. I was especially impressed by the weekly cleaning service – a rare find in an Airbnb! The security of the place made me feel at ease, and the location was perfect – close to everything I needed. Rommel is a fantastic host, ensuring that everything was perfect for my stay. By far the best Airbnb experience I’ve had. Highly recommend!"
   },
   {
-    name: "Maria Santos",
+    name: "Martha",
+    date: "August 2024",
+    platform: "Airbnb",
+    logo: checkus_airbnb,
+    rating: 5,
+    review: "Place was very comfy and clean. Bed sheets and pillows smelled good, and amenities were complete. It had everything we needed, plus the host was very kind and responsive! I liked the privacy and quietness of the place, really recommend booking this place 😁"
+  },
+  {
+    name: "Camille",
+    date: "April 2025",
+    platform: "Airbnb",
+    logo: checkus_airbnb,
+    rating: 5,
+    review: "Perfect location, walking distance to famous restaurants. Loved the place!"
+  },
+  {
+    name: "David",
+    date: "September 2024",
+    platform: "Airbnb",
+    logo: checkus_airbnb,
+    rating: 5,
+    review: "This was my second time staying here. Clean and matches the pictures and description.  Will consider staying again next time I am in town."
+  },
+  {
+    name: "Mishell",
+    date: "August 2023",
+    platform: "Airbnb",
+    logo: checkus_airbnb,
+    rating: 5,
+    review: "Highly recommend this place and Rommel, it was a great location restaurants across the road and others in walkable distance. Also had a little store across the road. Very convenient location not too far way from the main centre of Dumaguete was easy to find trike driver. The unit was amazing , clean and comfortable . Highly reccomend to stay there when visiting Dumaguete. Rommel was amazing very responsive and accomadating! . Will definitely stay again. Thank you Rommel 😊"
+  },
+  {
+    name: "Peter",
+    date: "April  2024",
     platform: "Booking.com",
     logo: checkus_bookingcom,
-    rating: 4,
-    review: "Smooth check-in process. Great location, though a bit noisy at night."
+    rating: 9.0,
+    review: "Clean and we were very well helped by the lady who handed the keys over to us."
   },
   {
-    name: "Lee Wen",
+    name: "Michael",
+    date: "April  2024",
+    platform: "Booking.com",
+    logo: checkus_bookingcom,
+    rating: 9.0,
+    review: "comfortable & clean"
+  },
+  {
+    name: "David",
+    date: "August 2024",
+    platform: "Booking.com",
+    logo: checkus_bookingcom,
+    rating: 10.0,
+    review: "Good value and good location"
+  },
+  {
+    name: "Maurice",
+    date: "May 2024",
+    platform: "Booking.com",
+    logo: checkus_bookingcom,
+    rating: 10.0,
+    review: "Great"
+  },
+  {
+    name: "Mary",
+    date: "March 2024",
+    platform: "Booking.com",
+    logo: checkus_bookingcom,
+    rating: 10.0,
+    review: "Cozy clean condo unit close to everything you need (restaurants/shops in the center)"
+  },
+  {
+    name: "marie",
+    date: "April 2025",
     platform: "Agoda",
     logo: checkus_agoda,
-    rating: 5,
-    review: "Absolutely amazing host. Everything was clean and well-organized. 10/10!"
+    rating: 10,
+    review: "Overall experience 10/10. The owner is super accommodating."
   },
-  // Add more entries here...
+  {
+    name: "shaurya",
+    date: "November 2024",
+    platform: "Agoda",
+    logo: checkus_agoda,
+    rating: 10,
+    review: "Great little condo excellent location Value for money A bit over the top with security who keep checking with you as to whether u reside there"
+  },
+  {
+    name: "shaurya",
+    date: "May 2023",
+    platform: "Agoda",
+    logo: checkus_agoda,
+    rating: 10,
+    review: "Rommel and Jephat, we’re beyond all expectations. Great hosts great people. After having another place drop us without reason, they went above and beyond to help us and out group. I recommend them to anyone going to Dumaguete."
+  },
 ];
