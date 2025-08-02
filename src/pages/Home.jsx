@@ -6,10 +6,13 @@ import {
   gallery_img5,
 } from "../assets/img";
 import { FaClock, FaUsers, FaChild, FaSmokingBan, FaDoorClosed, FaTrashAlt, FaUtensils, FaDog, FaBan, FaBirthdayCake } from 'react-icons/fa';
-
+import Slider from 'react-slick';
+import { FaStar } from 'react-icons/fa';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import Booking from "../components/Booking";
 import Rating from "../components/Rating";
-import { houseRulesList, img1, img2, img3, rating_info } from "../constants";
+import { houseRulesList, img1, img2, img3, rating_info, testimonials } from "../constants";
 import Page_Label from "../components/Page_Label";
 import AboutCard from "../components/AboutCard";
 
@@ -178,13 +181,40 @@ const HouseRules_Section = () => {
 };
 
 const Testimonial_Section = () => {
-  return(
-    <section className="testimonial">
-      
-      <Page_Label pageLabel={"Testimonials"} blue />
-      <h1>Happy Guest From All Over</h1>
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 800,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+
+  return (
+    <section className="testimonial_section">
+      <h2>What Our Guests Say</h2>
+      <Slider {...settings}>
+        {testimonials.map((t, index) => (
+          <div key={index} className="testimonial_card">
+            <div className="testimonial_platform">
+              <img src={t.logo} alt={t.platform} className="platform_logo" />
+            </div>
+            <p className="testimonial_review">"{t.review}"</p>
+            <div className="testimonial_footer">
+              <span className="testimonial_name">– {t.name}</span>
+              <div className="testimonial_rating">
+                {[...Array(t.rating)].map((_, i) => (
+                  <FaStar key={i} className="star" />
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
     </section>
-  )
+  );
 }
 
 export default Home;

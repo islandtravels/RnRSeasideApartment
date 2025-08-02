@@ -104,3 +104,29 @@ export const houseRulesList = [
     content: ["You may use all kitchen items.", "Please clean them before leaving."],
   },
 ];
+
+
+export const testimonials = [
+  {
+    name: "John Doe",
+    platform: "Airbnb",
+    logo: checkus_airbnb,
+    rating: 5,
+    review: "Wonderful stay! The place was spotless and very cozy. Would book again in a heartbeat."
+  },
+  {
+    name: "Maria Santos",
+    platform: "Booking.com",
+    logo: checkus_bookingcom,
+    rating: 4,
+    review: "Smooth check-in process. Great location, though a bit noisy at night."
+  },
+  {
+    name: "Lee Wen",
+    platform: "Agoda",
+    logo: checkus_agoda,
+    rating: 5,
+    review: "Absolutely amazing host. Everything was clean and well-organized. 10/10!"
+  },
+  // Add more entries here...
+];
