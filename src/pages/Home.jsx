@@ -12,18 +12,22 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Booking from "../components/Booking";
 import Rating from "../components/Rating";
-import { houseRulesList, img1, img2, img3, rating_info, testimonials } from "../constants";
+import { galleryImgList, houseRulesList, img1, img2, img3, rating_info, testimonials } from "../constants";
 import Page_Label from "../components/Page_Label";
 import AboutCard from "../components/AboutCard";
+import Gallery from "../components/Gallery";
 
 const Home = () => {
+
   return (
     <div className="page home">
       <Hero_Section />
+      <Location_Section />
       <About_Section />
       <Facilties_Section />
       <HouseRules_Section />
       <Testimonial_Section />
+      <Gallery imgList={galleryImgList} />
     </div>
   );
 };
@@ -154,23 +158,28 @@ const Facilties_Section = () => {
 
 const HouseRules_Section = () => {
   return (
-    <section className="house_rules">
+    <section className={"rulesSection"}>
       <Page_Label pageLabel={"House Rules"} blue />
       <br />
-      <h2 className="gradient-heading">Please read and follow these to ensure a pleasant stay for everyone.</h2>
-      <br />
-      <br />
-
-      <div className="rules_grid">
+      <h2 className={"heading"}>Follow For A Better Experience</h2>
+      <div className={"rulesGrid"}>
         {houseRulesList.map((rule, index) => {
           const Icon = rule.icon;
           return (
-            <div className="rule_card" key={index}>
-              <Icon className="icon" />
-              <div>
-                <h4>{rule.title}</h4>
-                {rule.content && rule.content.map((line, i) => <p key={i}>{line}</p>)}
-                {rule.note && <small>{rule.note}</small>}
+            <div key={index} className={"ruleCard"}>
+              <div className={"iconWrapper"}>
+                <Icon className={"icon"} />
+              </div>
+              <div className={"content"}>
+                <h3 className={"title"}>{rule.title}</h3>
+                {rule.content && (
+                  <ul className={"contentList"}>
+                    {rule.content.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+                {rule.note && <p className={"note"}>{rule.note}</p>}
               </div>
             </div>
           );
@@ -237,6 +246,21 @@ const Testimonial_Section = () => {
       </Slider>
     </section>
   );
+}
+
+const Location_Section = () => {
+  return (
+    <section className="location">
+      <Page_Label pageLabel={"Location"} blue />
+      <br />
+      <h2>We are located at Marina Spatial by Filinvest 88C6+MPJ, Lungsod ng Dumaguete, Lalawigan ng Negros Oriental</h2>
+      <br />
+      <div className="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d492.14109676408634!2d123.31144485445148!3d9.321856257338478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ab6fe90c2b71a7%3A0xcc333c33bb104eae!2sMarina%20Spatial%20by%20Filinvest!5e0!3m2!1sen!2sph!4v1687585593823!5m2!1sen!2sph" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      
+    </section>
+  )
 }
 
 export default Home;

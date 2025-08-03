@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../css/nav.css";
 import { LogoIconMain } from '../assets/img';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -15,6 +16,13 @@ const Nav = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const navLinkList = [
+    {
+      link: "",
+      name: ""
+    }
+  ]
+
   return (
     <header>
       <div className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
@@ -23,11 +31,21 @@ const Nav = () => {
         </div>
         <nav>
           <ul>
-            <li>Facilties</li>
-            <li>About</li>
-            <li>Find Us</li>
-            <li>FAQ</li>
-            <li>Book</li>
+            <li>
+              <Link to="/">Facilties</Link>
+            </li>
+            <li>
+              <Link to="/">About</Link>
+            </li>
+            <li>
+              <Link to="/">Find Us</Link>
+            </li>
+            <li>
+              <Link to="/">FAQ </Link>
+            </li>
+            <li>
+              <Link to="/">Book</Link>
+            </li>
           </ul>
         </nav>
         <div className="contact">

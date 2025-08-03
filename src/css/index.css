@@ -78,6 +78,15 @@ a {
     color: var(--color-black);
 }
 
+input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
 
 
 .review_stats {
@@ -172,7 +181,7 @@ a {
     width: 95%;
     border: 2px solid var(--color-background);
     border-radius: 20px;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .Card img {
@@ -188,81 +197,13 @@ a {
     padding: 10px 15px;
     border-radius: 50px;
     background-color: var(--color-background);
-    z-index: 999;
+    z-index: 99;
 }
 
 .Card .card_content p {
     color: var(--color-primary);
 }
 
-
-
-
-
-.booking {
-    margin-top: 2rem;
-    padding: 2rem;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-    width: 100%;
-}
-
-.booking-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.form-group {
-    flex: 1 1 calc(50% - 10px);
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-size: 14px;
-    color: var(--color-black);
-    margin-bottom: 6px;
-    font-weight: 600;
-}
-
-.form-group input {
-    padding: 12px 14px;
-    font-size: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.form-group input:focus {
-    border-color: var(--color-primary);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
-}
-
-.book-button {
-    flex: 1 1 100%;
-    padding: 14px;
-    font-size: 16px;
-    font-weight: 600;
-    background: var(--color-primary);
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.book-button:hover {
-    background: var(--color-highlight);
-}
-
-@media (max-width: 600px) {
-    .form-group {
-        flex: 1 1 100%;
-    }
-}
 
 
 
@@ -422,7 +363,7 @@ a {
 
 .facilities .container .left {
     position: absolute;
-    z-index: 999;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -441,7 +382,11 @@ a {
 .facilities .container .left .fac_list_container {
     width: 100%;
     height: 150px;
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
+    background-color: rgba(237, 241, 243, 0.8);
+    backdrop-filter: blur(5px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .facilities .container .left .fac_list_container .fac_list {
@@ -455,6 +400,8 @@ a {
 }
 
 .facilities .container .right {
+    overflow: hidden;
+    border-radius: 10px;
     height: 500px;
 }
 
@@ -472,7 +419,7 @@ a {
 }
 
 .facilities .container .right img {
-    height: 90%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -482,51 +429,106 @@ a {
 
 
 
-.house_rules {
-    padding: 100px 115px 100px 100px;
+.rulesSection {
+    padding: 100px 115px 50px 100px;
+    color: #333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rulesSection .heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.rulesSection .rulesGrid {
     width: 100%;
-    margin: auto;
-}
-
-.rules_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
 }
 
-.rule_card {
-    background: #f7f9fc;
-    border-left: 5px solid var(--color-primary);
-    border-radius: 10px;
-    padding: 1rem 1.2rem;
+.rulesSection .ruleCard {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease;
+    gap: 15px;
+    transition: transform 0.2s ease-in-out;
 }
 
-.rule_card:hover {
-    transform: translateY(-4px);
+.rulesSection .ruleCard::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    border: 1px solid var(--color-highlight);
+    border-radius: 10px;
+    z-index: 999;
+    transition: all 0.2s ease;
 }
 
-.rule_card .icon {
-    font-size: 1.8rem;
-    color: var(--color-primary);
-    min-width: 30px;
+.rulesSection .ruleCard:hover {
+    transform: translateY(-5px);
+}
+.rulesSection .ruleCard:hover:before {
+    height: calc(100% - 0px);
+    width: calc(100% - 0px);
+    border: 2px solid var(--color-highlight);
 }
 
-.rule_card h4 {
-    margin: 0 0 0.3rem;
+.rulesSection .iconWrapper {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #eef2f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.rulesSection .icon {
+    font-size: 1.4rem;
+    color: #005580;
+}
+
+.rulesSection .content {
+    flex: 1;
+}
+
+.rulesSection .title {
     font-size: 1.1rem;
-    color: var(--color-primary);
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #222;
 }
 
-.rule_card p,
-.rule_card small {
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--color-black);
+.rulesSection .contentList {
+    list-style: disc;
+    padding-left: 18px;
+    margin: 6px 0;
+    color: #555;
+}
+
+.rulesSection .note {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 6px;
+    font-style: italic;
 }
 
 
@@ -538,7 +540,7 @@ a {
     text-align: center;
 }
 
-.testimonial_section .title{
+.testimonial_section .title {
     width: 100%;
 
     display: flex;
@@ -590,7 +592,7 @@ a {
     font-weight: bold;
 }
 
-.rating-badge{
+.rating-badge {
     padding: 15px;
     border-radius: 5px;
 }
@@ -615,4 +617,57 @@ a {
 .rating-star {
     background-color: transparent;
     color: #000;
+}
+
+
+
+
+.gallery_container {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gallery__item {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+
+
+.location{
+    padding: 100px 115px 0px 100px;
+}
+
+.location .map{
+    height: 500px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.location .map iframe{
+    height: 100%;
+    width: 100%;
+    border: none;
 }

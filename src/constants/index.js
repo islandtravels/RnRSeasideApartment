@@ -1,4 +1,4 @@
-import { checkus_agoda, checkus_airbnb, checkus_bookingcom, gallery_img1, gallery_img10, gallery_img11, gallery_img12, gallery_img13, gallery_img2, gallery_img3, gallery_img4, gallery_img5, gallery_img6, gallery_img7, gallery_img8, gallery_img9, LogoIconMain } from '../assets/img';
+import { checkus_agoda, checkus_airbnb, checkus_bookingcom, gallery_img1, gallery_img10, gallery_img11, gallery_img12, gallery_img13, gallery_img14, gallery_img15, gallery_img16, gallery_img17, gallery_img18, gallery_img19, gallery_img2, gallery_img20, gallery_img21, gallery_img22, gallery_img3, gallery_img4, gallery_img5, gallery_img6, gallery_img7, gallery_img8, gallery_img9, LogoIconMain } from '../assets/img';
 import {
   FaClock,
   FaUsers,
@@ -212,3 +212,7 @@ export const testimonials = [
     review: "Rommel and Jephat, we’re beyond all expectations. Great hosts great people. After having another place drop us without reason, they went above and beyond to help us and out group. I recommend them to anyone going to Dumaguete."
   },
 ];
+
+export const galleryImgList = [gallery_img1, gallery_img2, gallery_img3, gallery_img4, gallery_img5, gallery_img6, gallery_img7, gallery_img8, gallery_img9, gallery_img10,
+  gallery_img11, gallery_img12, gallery_img13, gallery_img14, gallery_img15, gallery_img16, gallery_img17, gallery_img18, gallery_img19, gallery_img20, gallery_img21, gallery_img22
+]
