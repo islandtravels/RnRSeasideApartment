@@ -6,6 +6,8 @@ import {
   gallery_img5,
 } from "../assets/img";
 import { FaClock, FaUsers, FaChild, FaSmokingBan, FaDoorClosed, FaTrashAlt, FaUtensils, FaDog, FaBan, FaBirthdayCake } from 'react-icons/fa';
+import { MdOutlineEmail } from "react-icons/md";
+import { IoPhonePortraitOutline } from "react-icons/io5";
 import Slider from 'react-slick';
 import { FaStar } from 'react-icons/fa';
 import 'slick-carousel/slick/slick.css';
@@ -27,7 +29,6 @@ const Home = () => {
       <Facilties_Section />
       <HouseRules_Section />
       <Testimonial_Section />
-      <Gallery imgList={galleryImgList} />
     </div>
   );
 };
@@ -63,7 +64,10 @@ const Hero_Section = () => {
           </div>
 
           <div className="right">
-            <div className="cto"></div>
+            <div className="cto">
+              <p>islandtravels.ph@gmail.com <MdOutlineEmail /></p>
+              <p>0123456789 <IoPhonePortraitOutline /> </p>
+            </div>
             <div className="slider_img">
               <ImageSlider images={img3} interval={4000} classId={""} />
             </div>
@@ -200,6 +204,27 @@ const Testimonial_Section = () => {
     speed: 800,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // screens smaller than 1024px
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768, // screens smaller than 768px
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 480, // screens smaller than 480px
+        settings: {
+          slidesToShow: 1,
+          centerMode: false, // Disable centering for very small screens
+        },
+      },
+    ],
   };
 
   const getRatingClass = (platform, rating) => {
@@ -258,7 +283,7 @@ const Location_Section = () => {
       <div className="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d492.14109676408634!2d123.31144485445148!3d9.321856257338478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ab6fe90c2b71a7%3A0xcc333c33bb104eae!2sMarina%20Spatial%20by%20Filinvest!5e0!3m2!1sen!2sph!4v1687585593823!5m2!1sen!2sph" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      
+
     </section>
   )
 }

@@ -19,8 +19,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 95%;
-  width: 95%;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
   border: 2px solid var(--color-background);
   border-radius: 10px;
   z-index: 9999;
