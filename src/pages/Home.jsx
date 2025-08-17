@@ -202,26 +202,26 @@ const Testimonial_Section = () => {
     centerMode: true,
     autoplaySpeed: 5000,
     speed: 800,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024, // screens smaller than 1024px
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 768, // screens smaller than 768px
+        breakpoint: 768, 
         settings: {
           slidesToShow: 1,
         },
       },
       {
-        breakpoint: 480, // screens smaller than 480px
+        breakpoint: 480, 
         settings: {
           slidesToShow: 1,
-          centerMode: false, // Disable centering for very small screens
+          centerMode: false, 
         },
       },
     ],
@@ -253,6 +253,7 @@ const Testimonial_Section = () => {
             <div className="testimonial_platform">
               <img src={t.logo} alt={t.platform} className="platform_logo" />
             </div>
+            
             <p className="testimonial_review">"{t.review}"</p>
             <div className="testimonial_footer">
               <span className="testimonial_name">– {t.name}, {t.date}</span>
