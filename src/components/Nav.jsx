@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 
 /*
   TODO: FIX NAV BAR FOR MOBILE
-
-  
 */
 
 const Nav = () => {
