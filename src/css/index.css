@@ -521,6 +521,51 @@ textarea {
     border-radius: 10px;
 }
 
+.facePopUp{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 9999999;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 
+        top 500ms ease,
+        background 500ms ease 400ms, 
+        backdrop-filter 500ms ease 600ms;
+}
+
+.facePopUp.active{
+    top: 0;
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.facePopUp button{
+    min-width: 500px;
+    border-radius: 0px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: var(--color-highlight);
+}
+
+.facePopUp .facePopUpContainer{
+    min-width: 500px;
+    height: 80%;
+
+    background-color: var(--color-background);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 25px 35px;
+}
+
+
 
 
 

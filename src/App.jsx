@@ -5,6 +5,7 @@ import "./css/index.css";
 import Nav from "./components/Nav";
 import Gallery from "./components/Gallery";
 import { galleryImgList } from "./constants";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       </Routes>
       
       <Gallery imgList={galleryImgList} />
+      <Footer />
     </>
   );
 }

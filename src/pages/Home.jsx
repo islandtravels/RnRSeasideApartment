@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ImageSlider from "../components/ImageSlider";
 import {
   gallery_img14,
@@ -74,6 +74,7 @@ const Hero_Section = () => {
             <div className="rating">
               {rating_info.map((info, i) => (
                 <Rating
+                  key={i}
                   logoImg={info.img}
                   rating={info.rating}
                   reviews={info.reviews}
@@ -129,34 +130,50 @@ const About_Section = () => {
 };
 
 const Facilties_Section = () => {
-  return (
-    <section className="facilities">
-      <div className="container">
-        <div className="left">
-          <Page_Label pageLabel={"Facilities"} blue />
-          <h1 className="gradient-heading">What We Offer</h1>
+  const [facePopUp, setFacPopUp] = useState(false)
 
-          <div className="fac_list_container">
-            <div className="fac_list">
-              <p><i class="fa-solid fa-wifi"></i> Wifi</p>
-              <p><i class="fa-solid fa-tv"></i> 32 inch HDTV</p>
-              <p><i class="fa-solid fa-snowflake"></i> Air conditioning</p>
-              <p><i class="fa-solid fa-fire-burner"></i> Kitchen</p>
-              <p><i class="fa-solid fa-person-swimming"></i> Pool</p>
-              <p><i class="fa-solid fa-dumbbell"></i> Gym</p>
-              <p><i class="fa-solid fa-elevator"></i> Elevator</p>
-              <p><i class="fa-solid fa-fire-extinguisher"></i> Fire Extinguisher</p>
-              <p><i class="fa-solid fa-ban-smoking"></i> Smoke Detector</p>
-              <p><i class="fa-solid fa-eye"></i> 24-hour Security</p>
-              <button>View All Amenities</button>
+  const handlePopUpOpen = () => {
+    setFacPopUp(!facePopUp)
+  }
+
+  return (
+    <>
+      <section className="facilities">
+        <div className="container">
+          <div className="left">
+            <Page_Label pageLabel={"Facilities"} blue />
+            <h1 className="gradient-heading">What We Offer</h1>
+
+            <div className="fac_list_container">
+              <div className="fac_list">
+                <p><i className="fa-solid fa-wifi"></i> Wifi</p>
+                <p><i className="fa-solid fa-tv"></i> 32 inch HDTV</p>
+                <p><i className="fa-solid fa-snowflake"></i> Air conditioning</p>
+                <p><i className="fa-solid fa-fire-burner"></i> Kitchen</p>
+                <p><i className="fa-solid fa-person-swimming"></i> Pool</p>
+                <p><i className="fa-solid fa-dumbbell"></i> Gym</p>
+                <p><i className="fa-solid fa-elevator"></i> Elevator</p>
+                <p><i className="fa-solid fa-fire-extinguisher"></i> Fire Extinguisher</p>
+                <p><i className="fa-solid fa-ban-smoking"></i> Smoke Detector</p>
+                <p><i className="fa-solid fa-eye"></i> 24-hour Security</p>
+                <button onClick={handlePopUpOpen}>View All Amenities</button>
+              </div>
             </div>
           </div>
+          <div className="right">
+            <img src={gallery_img22} alt="" />
+          </div>
         </div>
-        <div className="right">
-          <img src={gallery_img22} alt="" />
+      </section>
+
+      <div className={`facePopUp ${facePopUp ? "active": ""}`}>
+        <button onClick={handlePopUpOpen}>Exit</button>
+        <div className="facePopUpContainer">
+          <h1>Facilities</h1>
         </div>
       </div>
-    </section>
+    </>
+
   );
 };
 
@@ -212,16 +229,16 @@ const Testimonial_Section = () => {
         },
       },
       {
-        breakpoint: 768, 
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
         },
       },
       {
-        breakpoint: 480, 
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          centerMode: false, 
+          centerMode: false,
         },
       },
     ],
@@ -253,7 +270,7 @@ const Testimonial_Section = () => {
             <div className="testimonial_platform">
               <img src={t.logo} alt={t.platform} className="platform_logo" />
             </div>
-            
+
             <p className="testimonial_review">"{t.review}"</p>
             <div className="testimonial_footer">
               <span className="testimonial_name">– {t.name}, {t.date}</span>
