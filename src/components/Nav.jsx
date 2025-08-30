@@ -47,7 +47,7 @@ const Nav = () => {
         </nav>
 
         <div className="contact"> 
-          <a href="mailto:islandtravels.ph@gmail.com" target="_blank"  rel="noreferrer"> Contact Us </a> 
+          <a href="mailto:islandtravels.ph@gmail.com?subject=Guest%20Message" target="_blank"  rel="noreferrer"> Contact Us </a> 
           <i className="fa-solid fa-inbox" style={{ color: "#0077B6" }}></i> 
         </div>
 
