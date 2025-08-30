@@ -36,7 +36,7 @@ const Home = () => {
 const Hero_Section = () => {
   return (
     <>
-      <section className="hero">
+      <section className="hero" id="hero">
         <div className="hero_info">
           <div className="info">
             <h1 className="gradient-heading">
@@ -71,7 +71,7 @@ const Hero_Section = () => {
             <div className="slider_img">
               <ImageSlider images={img3} interval={4000} classId={""} />
             </div>
-            <div className="rating">
+            <div className="rating left">
               {rating_info.map((info, i) => (
                 <Rating
                   key={i}
@@ -91,7 +91,7 @@ const Hero_Section = () => {
 
 const About_Section = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="title">
         <Page_Label pageLabel={"About"} blue />
         <br />
@@ -138,7 +138,7 @@ const Facilties_Section = () => {
 
   return (
     <>
-      <section className="facilities">
+      <section className="facilities" id="facilities">
         <div className="container">
           <div className="left">
             <Page_Label pageLabel={"Facilities"} blue />
@@ -166,7 +166,7 @@ const Facilties_Section = () => {
         </div>
       </section>
 
-      <div className={`facePopUp ${facePopUp ? "active": ""}`}>
+      <div className={`facePopUp ${facePopUp ? "active" : ""}`}>
         <button onClick={handlePopUpOpen}>Exit</button>
         <div className="facePopUpContainer">
           <h1>Facilities</h1>
@@ -179,7 +179,7 @@ const Facilties_Section = () => {
 
 const HouseRules_Section = () => {
   return (
-    <section className={"rulesSection"}>
+    <section className={"rulesSection"} id="rulesSection">
       <Page_Label pageLabel={"House Rules"} blue />
       <br />
       <h2 className={"heading"}>Follow For A Better Experience</h2>
@@ -259,7 +259,7 @@ const Testimonial_Section = () => {
 
 
   return (
-    <section className="testimonial_section">
+    <section className="testimonial_section" id="testimonial">
       <div className="title">
         <Page_Label pageLabel={"Testimonials"} blue />
         <h2>What Our Guests Say</h2>
@@ -293,7 +293,7 @@ const Testimonial_Section = () => {
 
 const Location_Section = () => {
   return (
-    <section className="location">
+    <section className="location" id="locations">
       <Page_Label pageLabel={"Location"} blue />
       <br />
       <h2>We are located at Marina Spatial by Filinvest 88C6+MPJ, Lungsod ng Dumaguete, Lalawigan ng Negros Oriental</h2>

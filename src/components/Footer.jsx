@@ -1,8 +1,13 @@
 import React from 'react'
+import "../css/footer.css"
+import { LogoIcon } from '../assets/img'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+      <img src={LogoIcon} alt="" />
+      <p></p>
+    </footer>
   )
 }
 

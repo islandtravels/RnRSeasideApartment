@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../css/nav.css";
 import { LogoIconMain } from '../assets/img';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 /*
   TODO: FIX NAV BAR FOR MOBILE
@@ -10,6 +10,14 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -24,25 +32,23 @@ const Nav = () => {
   return (
     <header>
       <div className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
-        <div className="img_con">
+        <Link to="/#hero" className="img_con">
           <img src={LogoIconMain} alt="Logo" />
-        </div>
+        </Link>
 
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <ul>
-            <li><Link to="/" onClick={() => setMenuOpen(false)}>Facilities</Link></li>
-            <li><Link to="/" onClick={() => setMenuOpen(false)}>About</Link></li>
-            <li><Link to="/" onClick={() => setMenuOpen(false)}>Find Us</Link></li>
-            <li><Link to="/" onClick={() => setMenuOpen(false)}>FAQ</Link></li>
-            <li><Link to="/" onClick={() => setMenuOpen(false)}>Book</Link></li>
+            <li><Link to="/#facilities" onClick={() => setMenuOpen(false)}>Facilities</Link></li>
+            <li><Link to="/#about" onClick={() => setMenuOpen(false)}>About</Link></li>
+            <li><Link to="/#locations" onClick={() => setMenuOpen(false)}>Find Us</Link></li>
+            <li><Link to="/FAQ#faq" onClick={() => setMenuOpen(false)}>FAQ</Link></li>
+            <li><Link to="/#hero" onClick={() => setMenuOpen(false)}>Book</Link></li>
           </ul>
         </nav>
 
-        <div className="contact">
-          <a href="mailto:islandtravels.ph@gmail.com" target="_blank" rel="noreferrer">
-            Contact Us
-          </a>
-          <i className="fa-solid fa-inbox" style={{ color: "#0077B6" }}></i>
+        <div className="contact"> 
+          <a href="mailto:islandtravels.ph@gmail.com" target="_blank"  rel="noreferrer"> Contact Us </a> 
+          <i className="fa-solid fa-inbox" style={{ color: "#0077B6" }}></i> 
         </div>
 
         <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
