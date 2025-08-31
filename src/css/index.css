@@ -340,6 +340,12 @@ textarea {
     .hero {
         height: calc(100vh + 300px);
     }
+
+    .hero .img_section>.right .rating {
+        height: 25%;
+        flex-direction: row;
+        margin: 40px 0;
+    }
 }
 
 
@@ -806,6 +812,12 @@ textarea {
     display: block;
 }
 
+@media only screen and (max-width : 768px) {
+    .gallery_container {
+        padding: 5rem 0 0 0;
+    }
+
+}
 
 
 
@@ -814,7 +826,6 @@ textarea {
 .location {
     /* padding: 100px 115px 0px 100px; */
 }
-
 
 .location .map {
     height: 500px;
@@ -827,4 +838,11 @@ textarea {
     height: 100%;
     width: 100%;
     border: none;
+}
+
+@media only screen and (max-width : 768px) {
+    .location {
+        margin: 10rem 0 5rem 0;
+    }
+
 }

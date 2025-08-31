@@ -113,7 +113,7 @@ export const testimonials = [
     platform: "Airbnb",
     logo: checkus_airbnb,
     rating: 5,
-    review: "I had an absolutely wonderful stay at Rommel’s place! From the moment I arrived, I felt right at home. The place was exceptionally clean and comfortable, with a level of cleanliness that truly sets it apart. I was especially impressed by the weekly cleaning service – a rare find in an Airbnb! The security of the place made me feel at ease, and the location was perfect – close to everything I needed. Rommel is a fantastic host, ensuring that everything was perfect for my stay. By far the best Airbnb experience I’ve had. Highly recommend!"
+    review: "I had an absolutely wonderful stay at Rommel’s place! From the moment I arrived, I felt right at home. "
   },
   {
     name: "Martha",
@@ -121,7 +121,7 @@ export const testimonials = [
     platform: "Airbnb",
     logo: checkus_airbnb,
     rating: 5,
-    review: "Place was very comfy and clean. Bed sheets and pillows smelled good, and amenities were complete. It had everything we needed, plus the host was very kind and responsive! I liked the privacy and quietness of the place, really recommend booking this place 😁"
+    review: "It had everything we needed, plus the host was very kind and responsive! I liked the privacy and quietness of the place, really recommend booking this place 😁"
   },
   {
     name: "Camille",
@@ -145,7 +145,7 @@ export const testimonials = [
     platform: "Airbnb",
     logo: checkus_airbnb,
     rating: 5,
-    review: "Highly recommend this place and Rommel, it was a great location restaurants across the road and others in walkable distance. Also had a little store across the road. Very convenient location not too far way from the main centre of Dumaguete was easy to find trike driver. The unit was amazing , clean and comfortable . Highly reccomend to stay there when visiting Dumaguete. Rommel was amazing very responsive and accomadating! . Will definitely stay again. Thank you Rommel 😊"
+    review: "Highly recommend this place and Rommel, it was a great location restaurants across the road and others in walkable distance."
   },
   {
     name: "Peter",
@@ -213,6 +213,5 @@ export const testimonials = [
   },
 ];
 
-export const galleryImgList = [gallery_img1, gallery_img2, gallery_img3, gallery_img4, gallery_img5, gallery_img6, gallery_img7, gallery_img8, gallery_img9, gallery_img10,
-  gallery_img11, gallery_img12, gallery_img13, gallery_img14, gallery_img15, gallery_img16, gallery_img17, gallery_img18, gallery_img19, gallery_img20, gallery_img21, gallery_img22
+export const galleryImgList = [gallery_img1, gallery_img2, gallery_img3, gallery_img4, gallery_img5, gallery_img6, gallery_img7, gallery_img8, gallery_img9, gallery_img10
 ]
