@@ -4,6 +4,14 @@ import Page_Label from './Page_Label';
 import { formatDate } from '../helpers/formatDate';
 import emailjs from "emailjs-com";
 
+
+const getTomorrowDate = () => {
+    const today = new Date();
+    today.setDate(today.getDate() + 1); // Move to tomorrow
+    return today.toISOString().split("T")[0]; // Format YYYY-MM-DD
+};
+
+
 const PopUp = ({ onClose, bookingData, setBookingData }) => {
     const [localData, setLocalData] = useState(bookingData);
     const [editingField, setEditingField] = useState(null);
@@ -71,6 +79,7 @@ const PopUp = ({ onClose, bookingData, setBookingData }) => {
                             onBlur={() => setEditingField(null)}
                             autoFocus
                             required
+                            min={getTomorrowDate()}
                         />
                     ) : (
                         <p
@@ -92,6 +101,7 @@ const PopUp = ({ onClose, bookingData, setBookingData }) => {
                             onBlur={() => setEditingField(null)}
                             autoFocus
                             required
+                            min={getTomorrowDate()}
                         />
                     ) : (
                         <p
@@ -193,12 +203,24 @@ const Booking = () => {
             <form className="booking-form" onSubmit={handleFormSubmit}>
                 <div className="form-group">
                     <label htmlFor="checkin">Check-In</label>
-                    <input type="date" id="checkin" name="checkin" required />
+                    <input
+                        type="date"
+                        id="checkin"
+                        name="checkin"
+                        required
+                        min={getTomorrowDate()}
+                    />
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="checkout">Check-Out</label>
-                    <input type="date" id="checkout" name="checkout" required />
+                    <input
+                        type="date"
+                        id="checkout"
+                        name="checkout"
+                        required
+                        min={getTomorrowDate()}
+                    />
                 </div>
 
                 <div className="form-group">
