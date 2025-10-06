@@ -139,31 +139,12 @@ const Facilties_Section = () => {
   return (
     <>
       <section className="facilities" id="facilities">
-        <div className="container">
-          <div className="left">
-            <Page_Label pageLabel={"Facilities"} blue />
-            <h1 className="gradient-heading">What We Offer</h1>
+        <Page_Label pageLabel={"Facilities"} blue />
+        <div className="hero_img">
 
-            <div className="fac_list_container">
-              <div className="fac_list">
-                <p><i className="fa-solid fa-wifi"></i> Wifi</p>
-                <p><i className="fa-solid fa-tv"></i> 32 inch HDTV</p>
-                <p><i className="fa-solid fa-snowflake"></i> Air conditioning</p>
-                <p><i className="fa-solid fa-fire-burner"></i> Kitchen</p>
-                <p><i className="fa-solid fa-person-swimming"></i> Pool</p>
-                <p><i className="fa-solid fa-dumbbell"></i> Gym</p>
-                <p><i className="fa-solid fa-elevator"></i> Elevator</p>
-                <p><i className="fa-solid fa-fire-extinguisher"></i> Fire Extinguisher</p>
-                <p><i className="fa-solid fa-ban-smoking"></i> Smoke Detector</p>
-                <p><i className="fa-solid fa-eye"></i> 24-hour Security</p>
-                <button onClick={handlePopUpOpen}>View All Amenities</button>
-              </div>
-            </div>
-          </div>
-          <div className="right">
-            <img src={gallery_img22} alt="" />
-          </div>
         </div>
+        
+
       </section>
 
       <div className={`facePopUp ${facePopUp ? "active" : ""}`}>
