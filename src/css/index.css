@@ -450,9 +450,43 @@ textarea {
 
 
 
+.facilities{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.facilities .hero_img{
+    width: 100%;
+    height: auto;
+}
+
+.facilities .hero_img img{
+    width: 100%;
+    border-radius: 25px;
+}
+
+.facilities .list{
+    width: 100%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+
+    border: 1px var(--color-highlight) solid;
+}
 
 
 
+.facilities >button{
+    background-color: var(--color-primary);
+    color: white;
+}
 
 
 .facePopUp{

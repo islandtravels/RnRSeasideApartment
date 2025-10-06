@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import ImageSlider from "../components/ImageSlider";
 import {
+  gallery_img10,
+  gallery_img11,
+  gallery_img12,
   gallery_img14,
+  gallery_img2,
   gallery_img22,
   gallery_img5,
 } from "../assets/img";
@@ -141,11 +145,27 @@ const Facilties_Section = () => {
       <section className="facilities" id="facilities">
         <Page_Label pageLabel={"Facilities"} blue />
         <div className="hero_img">
-
+          <img src={gallery_img22} alt="" />
         </div>
-        
 
-      </section>
+        <div className="list">
+            <p><i className="fa-solid fa-wifi"></i> Wifi</p>
+            <p><i className="fa-solid fa-tv"></i> 32 inch HDTV</p>
+            <p><i className="fa-solid fa-snowflake"></i> Air conditioning</p>
+            <p><i className="fa-solid fa-fire-burner"></i> Kitchen</p>
+            <p><i className="fa-solid fa-person-swimming"></i> Pool</p>
+
+            <p><i className="fa-solid fa-dumbbell"></i> Gym</p>
+            <p><i className="fa-solid fa-elevator"></i> Elevator</p>
+            <p><i className="fa-solid fa-fire-extinguisher"></i> Fire Extinguisher</p>
+            <p><i className="fa-solid fa-ban-smoking"></i> Smoke Detector</p>
+            <p><i className="fa-solid fa-eye"></i> 24-hour Security</p>
+      </div>
+
+      <button onClick={handlePopUpOpen}>See More</button>
+
+
+    </section >
 
       <div className={`facePopUp ${facePopUp ? "active" : ""}`}>
         <button onClick={handlePopUpOpen}>Exit</button>
