@@ -4,7 +4,6 @@
     border-radius: 10px;
     background: #fff;
     z-index: 0;
-    overflow: hidden;
     text-align: center;
 }
 
@@ -49,6 +48,12 @@
     object-fit: contain;
 }
 
+@media only screen and (max-height : 730px) {
+
+    .review_stats {
+        margin-top: 20px;
+    }
+}
 
 
 @media only screen and (max-width : 1600px) {
