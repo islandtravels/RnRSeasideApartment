@@ -9,6 +9,10 @@ import {
   FaDoorClosed,
   FaTrashAlt,
   FaUtensils,
+  FaWifi, FaTv, FaSnowflake, FaSwimmingPool, FaDumbbell, FaBasketballBall,
+  FaShieldAlt, FaKey, FaBed, FaShower, FaSoap, FaCouch, FaFireExtinguisher,
+  FaUmbrellaBeach, FaMugHot, FaGamepad, FaBuilding, FaTemperatureLow,
+  FaFire, FaChair, FaBox, FaBell, FaTshirt, FaBullseye, FaLightbulb,
 } from "react-icons/fa";
 
 export const img1 = [
@@ -51,6 +55,68 @@ export const rating_info = [
   },
 ]
 
+// Facilities shown in the "See More" pop up.
+// Sourced from the Airbnb listing (description + amenities) and the Booking.com listing for the same unit.
+export const facilitiesList = [
+  {
+    category: "In the Unit",
+    items: [
+      { icon: FaWifi, label: "Free Wi-Fi" },
+      { icon: FaSnowflake, label: "Air conditioning" },
+      { icon: FaTv, label: "32 inch Smart HDTV" },
+      { icon: FaCouch, label: "Living area with sofa" },
+      { icon: FaChair, label: "Dining area" },
+      { icon: FaBox, label: "Storage space" },
+    ],
+  },
+  {
+    category: "Bedrooms & Bath",
+    items: [
+      { icon: FaBed, label: "2 bedrooms (3 beds)" },
+      { icon: FaTshirt, label: "Fresh linens & towels at check-in" },
+      { icon: FaShower, label: "Hot shower" },
+      { icon: FaSoap, label: "Essential toiletries" },
+    ],
+  },
+  {
+    category: "Kitchen",
+    items: [
+      { icon: FaUtensils, label: "Fully equipped kitchen" },
+      { icon: FaTemperatureLow, label: "Refrigerator" },
+      { icon: FaFire, label: "Microwave" },
+      { icon: FaMugHot, label: "Electric kettle" },
+    ],
+  },
+  {
+    category: "Resort-style Amenities",
+    items: [
+      { icon: FaSwimmingPool, label: "Outdoor swimming pool (open year-round, set hours)" },
+      { icon: FaDumbbell, label: "Fitness gym" },
+      { icon: FaBasketballBall, label: "Basketball court" },
+      { icon: FaBullseye, label: "Pool hall / billiards" },
+      { icon: FaChild, label: "Kids' playground" },
+      { icon: FaGamepad, label: "Games room & lounge" },
+      { icon: FaUmbrellaBeach, label: "Shared beach access & seaside promenade" },
+    ],
+  },
+  {
+    category: "Safety & Access",
+    items: [
+      { icon: FaShieldAlt, label: "24/7 security & gated entry" },
+      { icon: FaKey, label: "Self check-in with lockbox" },
+      { icon: FaBuilding, label: "Elevator" },
+      { icon: FaLightbulb, label: "Lit path to guest entrance" },
+      { icon: FaFireExtinguisher, label: "Fire extinguisher" },
+      { icon: FaBell, label: "Smoke detector" },
+    ],
+  },
+];
+
+export const facilitiesNotes = [
+  "Parking is not included. Please contact us in advance, availability is limited and subject to a fee.",
+  "This is a privately managed residence, not a hotel. Daily housekeeping and linen changes are not provided.",
+  "The unit faces the back of the mall. Sea views are a short walk outside the main gate.",
+];
 
 export const houseRulesList = [
   {

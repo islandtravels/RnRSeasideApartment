@@ -533,6 +533,74 @@ textarea {
     padding: 25px 35px;
 }
 
+.facePopUp .facePopUpContainer{
+    width: min(640px, 92vw);
+    min-width: 0;
+    overflow-y: auto;
+}
+
+.facePopUp .facePopUpContainer h1{
+    margin-bottom: 20px;
+    color: var(--color-black);
+}
+
+.facePopUp .facGroup,
+.facePopUp .facNotes{
+    margin-bottom: 22px;
+}
+
+.facePopUp .facGroup h3,
+.facePopUp .facNotes h3{
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--color-highlight);
+}
+
+.facePopUp .facGroup ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px 20px;
+}
+
+.facePopUp .facGroup li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-black);
+    font-size: 0.95rem;
+}
+
+.facePopUp .facIcon{
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    padding: 9px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: var(--color-primary);
+}
+
+.facePopUp .facNotes ul{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@media only screen and (max-width : 600px) {
+    .facePopUp button{
+        min-width: 0;
+        width: min(640px, 92vw);
+    }
+}
+
 
 
 

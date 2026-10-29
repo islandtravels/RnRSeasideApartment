@@ -18,7 +18,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Booking from "../components/Booking";
 import Rating from "../components/Rating";
-import { galleryImgList, houseRulesList, img1, img2, img3, rating_info, testimonials } from "../constants";
+import { facilitiesList, facilitiesNotes, galleryImgList, houseRulesList, img1, img2, img3, rating_info, testimonials } from "../constants";
 import Page_Label from "../components/Page_Label";
 import AboutCard from "../components/AboutCard";
 import Gallery from "../components/Gallery";
@@ -171,6 +171,31 @@ const Facilties_Section = () => {
         <button onClick={handlePopUpOpen}>Exit</button>
         <div className="facePopUpContainer">
           <h1>Facilities</h1>
+          {facilitiesList.map((group) => (
+            <div key={group.category} className="facGroup">
+              <h3>{group.category}</h3>
+              <ul>
+                {group.items.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <li key={item.label}>
+                      <Icon className="facIcon" />
+                      <span>{item.label}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
+
+          <div className="facNotes">
+            <h3>Good to know</h3>
+            <ul>
+              {facilitiesNotes.map((note, i) => (
+                <li key={i}>{note}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </>
